@@ -37,8 +37,8 @@ Password: <input type="password" name="pass"><br />
 </form>
 <?php
 
-$con=mysqli_connect('localhost','maxmoolato','max','') or die(mysql_error());
-mysqli_select_db($con, "test") or die("cannot select DB");
+$con=mysqli_connect('localhost','root','','') or die(mysql_error());
+mysqli_select_db($con, 'user_registration') or die("cannot select DB");
 
 //PreparedStatement
 $stmt = $con->prepare("SELECT username, password FROM users WHERE username=? AND password=?;");
